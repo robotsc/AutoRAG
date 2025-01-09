@@ -3,9 +3,6 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta content="AutoRAG - Flag Embedding LLM Reranker" name="title" />
-<meta content="Learn about flag embedding LLM reranker module in AutoRAG" name="description" />
-<meta content="AutoRAG,RAG,Advanced RAG,Reranker,FlagEmbedding,FlagEmbeddingLLM" name="keywords" />
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-T8ZKQM6RT9"></script>
@@ -15,11 +12,11 @@
         gtag('js', new Date());
         gtag('config', 'G-T8ZKQM6RT9');
     </script>
-    <link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Flag Embedding LLM Reranker" href="flag_embedding_llm_reranker.html" /><link rel="prev" title="Sentence Transformer Reranker" href="sentence_transformer_reranker.html" />
-        <link rel="canonical" href="https://docs.auto-rag.com/nodes/passage_reranker/flag_embedding_reranker.html" />
+    <link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="API endpoint" href="../../deploy/api_endpoint.html" /><link rel="prev" title="OpenAI LLM" href="openai_llm.html" />
+        <link rel="canonical" href="https://docs.auto-rag.com/nodes/generator/vllm_api.html" />
 
     <!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
-        <title>Flag Embedding Reranker - AutoRAG documentation</title>
+        <title>vLLM API - AutoRAG documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -309,23 +306,23 @@
 <li class="toctree-l2"><a class="reference internal" href="../passage_augmenter/prev_next_augmenter.html">Prev Next Augmenter</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current has-children"><a class="reference internal" href="passage_reranker.html">4. Passage_Reranker</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of 4. Passage_Reranker</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="upr.html">UPR</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tart.html">TART</a></li>
-<li class="toctree-l2"><a class="reference internal" href="monot5.html">MonoT5</a></li>
-<li class="toctree-l2"><a class="reference internal" href="koreranker.html">Ko-reranker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cohere.html">cohere_reranker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rankgpt.html">RankGPT</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jina_reranker.html">jina_reranker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="colbert.html">Colbert Reranker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sentence_transformer_reranker.html">Sentence Transformer Reranker</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Flag Embedding Reranker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="flag_embedding_llm_reranker.html">Flag Embedding LLM Reranker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="time_reranker.html">Time Reranker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openvino_reranker.html">OpenVINO Reranker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="voyageai_reranker.html">voyageai_reranker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mixedbreadai_reranker.html">Mixedbread AI Reranker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="flashrank_reranker.html">FlashRank Reranker</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../passage_reranker/passage_reranker.html">4. Passage_Reranker</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of 4. Passage_Reranker</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../passage_reranker/upr.html">UPR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../passage_reranker/tart.html">TART</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../passage_reranker/monot5.html">MonoT5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../passage_reranker/koreranker.html">Ko-reranker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../passage_reranker/cohere.html">cohere_reranker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../passage_reranker/rankgpt.html">RankGPT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../passage_reranker/jina_reranker.html">jina_reranker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../passage_reranker/colbert.html">Colbert Reranker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../passage_reranker/sentence_transformer_reranker.html">Sentence Transformer Reranker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../passage_reranker/flag_embedding_reranker.html">Flag Embedding Reranker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../passage_reranker/flag_embedding_llm_reranker.html">Flag Embedding LLM Reranker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../passage_reranker/time_reranker.html">Time Reranker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../passage_reranker/openvino_reranker.html">OpenVINO Reranker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../passage_reranker/voyageai_reranker.html">voyageai_reranker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../passage_reranker/mixedbreadai_reranker.html">Mixedbread AI Reranker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../passage_reranker/flashrank_reranker.html">FlashRank Reranker</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../passage_filter/passage_filter.html">5. Passage Filter</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of 5. Passage Filter</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -348,11 +345,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../prompt_maker/window_replacement.html">Window Replacement</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../generator/generator.html">8. Generator</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of 8. Generator</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../generator/llama_index_llm.html">llama_index LLM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../generator/vllm.html">vllm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../generator/openai_llm.html">OpenAI LLM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../generator/vllm_api.html">vLLM API</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="generator.html">8. Generator</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of 8. Generator</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="llama_index_llm.html">llama_index LLM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vllm.html">vllm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openai_llm.html">OpenAI LLM</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">vLLM API</a></li>
 </ul>
 </li>
 </ul>
@@ -390,7 +387,7 @@
         </a>
         <div class="content-icon-container">
           <div class="view-this-page">
-  <a class="muted-link" href="../../_sources/nodes/passage_reranker/flag_embedding_reranker.md.txt" title="View this page">
+  <a class="muted-link" href="../../_sources/nodes/generator/vllm_api.md.txt" title="View this page">
     <svg><use href="#svg-eye"></use></svg>
     <span class="visually-hidden">View this page</span>
   </a>
@@ -410,27 +407,36 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="flag-embedding-reranker">
-<h1>Flag Embedding Reranker<a class="headerlink" href="#flag-embedding-reranker" title="Link to this heading">¶</a></h1>
-<p>The <code class="docutils literal notranslate"><span class="pre">flag</span> <span class="pre">embedding</span> <span class="pre">reranker</span></code> module is a reranker using BAAI normal-Reranker model for
-passage reranking.</p>
+          <section id="vllm-api">
+<h1>vLLM API<a class="headerlink" href="#vllm-api" title="Link to this heading">¶</a></h1>
+<p>To save the reinitialization time, it is great to use vLLM API instead of the original vLLM integration.
+You can use openAI like API server, but you can use vLLM API server as well to get a full feature of vLLM.</p>
+<section id="start-the-vllm-api-server">
+<h2>Start the vLLM API server<a class="headerlink" href="#start-the-vllm-api-server" title="Link to this heading">¶</a></h2>
+<p>In your vLLM installed machine, start vLLM API server like below.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vllm<span class="w"> </span>serve<span class="w"> </span>Qwen/Qwen2.5-14B-Instruct-AWQ<span class="w"> </span>-q<span class="w"> </span>awq<span class="w"> </span>--port<span class="w"> </span><span class="m">8012</span>
+</pre></div>
+</div>
+<p>You can find the detail about vLLM API server at the <a class="reference external" href="https://docs.vllm.ai/en/stable/getting_started/quickstart.html#openai-compatible-server">vLLM documentation</a>.</p>
+</section>
 <section id="module-parameters">
 <h2><strong>Module Parameters</strong><a class="headerlink" href="#module-parameters" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p><strong>batch</strong> : The size of a batch. If you have limited CUDA memory, decrease the size of the batch. (default: 64)</p></li>
-<li><p><strong>model_name</strong> : The type of model you want to use for reranking. Default is “BAAI/bge-reranker-large.”</p>
-<ul>
-<li><p>you can check a model list at <a class="reference external" href="https://github.com/FlagOpen/FlagEmbedding">here</a></p></li>
-</ul>
-</li>
-<li><p><strong>use_fp16</strong> : Whether to use fp16 or not. (default: False)</p></li>
+<li><p><strong>llm</strong>: You can type your ‘model name’ at here. For example, <code class="docutils literal notranslate"><span class="pre">facebook/opt-125m</span></code>
+or <code class="docutils literal notranslate"><span class="pre">mistralai/Mistral-7B-Instruct-v0.2</span></code>.</p></li>
+<li><p><strong>uri</strong>: The URI of the vLLM API server.</p></li>
+<li><p><strong>max_tokens</strong>: The maximum number of tokens. Default is 4096. Consider using longer tokens for longer prompts.</p></li>
+<li><p><strong>temperature</strong>: The temperature of the sampling. Higher temperature means more randomness.
+And support all parameters from vLLM API.</p></li>
 </ul>
 </section>
 <section id="example-config-yaml">
 <h2><strong>Example config.yaml</strong><a class="headerlink" href="#example-config-yaml" title="Link to this heading">¶</a></h2>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">module_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flag_embedding_reranker</span>
-<span class="w">  </span><span class="nt">batch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">32</span>
-<span class="w">  </span><span class="nt">model_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BAAI/bge-reranker-large</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">module_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vllm_api</span>
+<span class="w">   </span><span class="nt">uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://localhost:8012</span>
+<span class="w">   </span><span class="nt">llm</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Qwen/Qwen2.5-14B-Instruct-AWQ</span>
+<span class="w">   </span><span class="nt">temperature</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0.5</span><span class="p p-Indicator">]</span>
+<span class="w">   </span><span class="nt">max_tokens</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">400</span>
 </pre></div>
 </div>
 </section>
@@ -441,23 +447,23 @@ passage reranking.</p>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="flag_embedding_llm_reranker.html">
+          <a class="next-page" href="../../deploy/api_endpoint.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Flag Embedding LLM Reranker</div>
+                <div class="title">API endpoint</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="sentence_transformer_reranker.html">
+          <a class="prev-page" href="openai_llm.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Sentence Transformer Reranker</div>
+                <div class="title">OpenAI LLM</div>
                 
               </div>
             </a>
@@ -491,7 +497,8 @@ passage reranking.</p>
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Flag Embedding Reranker</a><ul>
+<li><a class="reference internal" href="#">vLLM API</a><ul>
+<li><a class="reference internal" href="#start-the-vllm-api-server">Start the vLLM API server</a></li>
 <li><a class="reference internal" href="#module-parameters"><strong>Module Parameters</strong></a></li>
 <li><a class="reference internal" href="#example-config-yaml"><strong>Example config.yaml</strong></a></li>
 </ul>
