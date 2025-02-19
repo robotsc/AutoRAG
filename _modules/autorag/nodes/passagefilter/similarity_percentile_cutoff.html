@@ -220,6 +220,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../migration.html">Migration Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../test_your_rag.html">Evaluate your RAG</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">AutoRAG GUI</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../gui/gui.html">AutoRAG GUI</a></li>
+</ul>
 <p class="caption" role="heading"><span class="caption-text">Data Creation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../data_creation/tutorial.html">Evaluation data creation tutorial</a></li>
@@ -407,7 +411,7 @@
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
-<span class="kn">from</span><span class="w"> </span><span class="nn">autorag.embedding.base</span><span class="w"> </span><span class="kn">import</span> <span class="n">embedding_models</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">autorag.embedding.base</span><span class="w"> </span><span class="kn">import</span> <span class="n">EmbeddingModel</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">autorag.evaluation.metric.util</span><span class="w"> </span><span class="kn">import</span> <span class="n">calculate_cosine_similarity</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">autorag.nodes.passagefilter.base</span><span class="w"> </span><span class="kn">import</span> <span class="n">BasePassageFilter</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">autorag.nodes.passagefilter.similarity_threshold_cutoff</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
@@ -429,8 +433,8 @@
 <span class="sd">		        Default is &quot;openai&quot; which is OpenAI text-embedding-ada-002 embedding model.</span>
 <span class="sd">		&quot;&quot;&quot;</span>
 		<span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">project_dir</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-		<span class="n">embedding_model_str</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;embedding_model&quot;</span><span class="p">,</span> <span class="s2">&quot;openai&quot;</span><span class="p">)</span>
-		<span class="bp">self</span><span class="o">.</span><span class="n">embedding_model</span> <span class="o">=</span> <span class="n">embedding_models</span><span class="p">[</span><span class="n">embedding_model_str</span><span class="p">]()</span>
+		<span class="n">embedding_model</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;embedding_model&quot;</span><span class="p">,</span> <span class="s2">&quot;openai&quot;</span><span class="p">)</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">embedding_model</span> <span class="o">=</span> <span class="n">EmbeddingModel</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">embedding_model</span><span class="p">)()</span>
 
 	<span class="k">def</span><span class="w"> </span><span class="fm">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 		<span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__del__</span><span class="p">()</span>
